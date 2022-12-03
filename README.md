@@ -17,5 +17,5 @@
  6. quizauthenticate.py -> this requires "cookies.py","host.py" and "quizid.py" in the same folder.
  7. submit.py -> this requires "cookies.py","Answers.py","host.py" and "keystate.py" in the same folder.
 
-# NOTE : After everytime you run login.py the cookies.py needs to be updated.
-# NOTE : To run use locust -f <file.py>
+### NOTE : After everytime you run login.py the cookies.py needs to be updated.
+### NOTE : To run use locust -f <file.py>
