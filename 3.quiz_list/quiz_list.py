@@ -1,7 +1,7 @@
-from coursecode import coursecode
-from host import host
+from ..initial_configuration.coursecode import coursecode
+from ..initial_configuration.host import host
 import json
-from cookies import cookies
+from ..initial_configuration.cookies import cookies
 from locust import HttpUser,SequentialTaskSet,task,constant,log
 from locust.exception import StopUser
 class SafeLogin(SequentialTaskSet):

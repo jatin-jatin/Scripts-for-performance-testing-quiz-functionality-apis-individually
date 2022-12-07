@@ -1,7 +1,7 @@
-from quizid import quizid
-from host import host
+from ..initial_configuration.quizid import quizid
+from ..initial_configuration.host import host
+from ..initial_configuration.cookies import cookies
 import json
-from cookies import cookies
 from locust import HttpUser,SequentialTaskSet,task,constant,log
 class SafeLogin(SequentialTaskSet):
     def __init__(self,parent):

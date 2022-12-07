@@ -1,8 +1,8 @@
-from keystate import keystate
-from host import host
-from cookies import cookies
+from ..initial_configuration.keystate import keystate
+from ..initial_configuration.host import host
+from ..initial_configuration.cookies import cookies
 from locust import HttpUser,SequentialTaskSet,task,constant,log
-from Answers import answers
+from ..initial_configuration.Answers import answers
 import json
 import datetime
 

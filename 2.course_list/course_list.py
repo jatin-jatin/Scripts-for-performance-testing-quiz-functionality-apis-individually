@@ -1,6 +1,6 @@
-from host import host
 import json
-from cookies import cookies
+from ..initial_configuration.host import host
+from ..initial_configuration.cookies import cookies 
 from locust import HttpUser,SequentialTaskSet,task,constant,log
 from locust.exception import StopUser
 class SafeLogin(SequentialTaskSet):

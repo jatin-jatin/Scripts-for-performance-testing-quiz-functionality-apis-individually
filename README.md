@@ -1,21 +1,15 @@
-# Initial configurations 
- 1. configure the host in host.py by editing host.py
- 2. Place the credentials.py file in the same folder as buildCookies.py in order to build cookie credentials.
- 3. Ensure you have requests lib  and json modules installed . In case not use pip for installing  them
+# Initial configurations
+### NOTE : Do these steps in the initial_configuration folder
+ 1. Place the latest copys of credentials.py and Answers.py in the initial_configuration folder.
+ 2. Ensure you have requests  and json library installed . In case not, you can use pip for installing them.
+ 3. configure the host in host.py by editing host.py
  4. Run buildcookies.py that will take significant time and will generate "cookies.py"
- 5. Ensure that testname.py exists and was executed once to store the quizid. Also ensure that buildcookies.py was successfully executed.
+ 5. Ensure that quizid.py exists and was executed once to store the quizid. Also ensure that buildcookies.py was successfully executed.
  6. Execute buildkeystate.py this will generate the "keystate.py" file.
  7. Also execute coursecode.py in order to store the coursecode.
- 8. execute files.sh to apply changes to all files
-
-# Details about runnign Each API with locust
- 1. login.py  -> this requires "credentials.py" and "host.py" in the same folder.
- 2. courselist.py -> this requires "cookies.py" and "host.py" in the same folder.
- 3. quizlist.py -> this requires "cookies.py","host.py" and "coursecode.py" in the same folder.
- 4. quizinfo.py -> this requires "cookies.py","host.py" and "quizid.py" in the same folder.
- 5. quizdownload.py -> this requires "cookies.py","host.py" and "quizid.py" in the same folder.
- 6. quizauthenticate.py -> this requires "cookies.py","host.py" and "quizid.py" in the same folder.
- 7. submit.py -> this requires "cookies.py","Answers.py","host.py" and "keystate.py" in the same folder.
-
-### NOTE : After everytime you run login.py the cookies.py needs to be updated.
+ <!-- 8. Also ensure that Answers.py is in the initial_configuration folder. -->
+ <!-- 8. execute files.sh to apply changes to all files -->
+# Running Each API with locust
+ $ locust -f <API.py>
+### NOTE : After everytime you run login.py the cookies.py needs to be updated by running the buildcookies.py .
 ### NOTE : To run use locust -f <file.py>

@@ -1,5 +1,6 @@
-from host import host
-from credentials import USER_CREDENTIALS
+# from host import host
+from ..initial_configuration.host import host
+from ..initial_configuration.credentials import USER_CREDENTIALS
 from locust import HttpUser,SequentialTaskSet,task,constant,log
 from locust.exception import StopUser
 
@@ -17,12 +18,13 @@ class SafeLogin(SequentialTaskSet):
             }
             with self.client.post(url,name="login",data=data,catch_response=True) as response:
                 print(url,response)
-    @task
+                print(response.text)
+    # @task
     def on_stop(self):
         raise StopUser()
 
 class MySeqTest(HttpUser):
-    wait_time=constant(1)
+    wait_time=constant(0.2)
     host=host
     tasks = [SafeLogin]
 
