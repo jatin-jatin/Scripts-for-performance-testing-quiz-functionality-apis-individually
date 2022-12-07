@@ -11,6 +11,5 @@
  <!-- 8. execute files.sh to apply changes to all files -->
 # Running Each API with locust
  $ locust -f <API.py>
-### NOTE : After everytime you run login.py the cookies.py needs to be updated by running the buildcookies.py .
-### NOTE : To run use locust -f <file.py>
 example to run quiz_info use : locust -f quiz_info.py
+### NOTE : After everytime you run login.py the cookies.py needs to be updated by running the buildcookies.py .
