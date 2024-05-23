@@ -10,6 +10,11 @@
  <!-- 8. Also ensure that Answers.py is in the initial_configuration folder. -->
  <!-- 8. execute files.sh to apply changes to all files -->
 # Running Each API with locust
+```
  $ locust -f <API.py>
-example to run quiz_info use : locust -f quiz_info.py
+```
+example to run quiz_info use: 
+```
+locust -f quiz_info.py
+```
 ### NOTE : After everytime you run login.py the cookies.py needs to be updated by running the buildcookies.py .
